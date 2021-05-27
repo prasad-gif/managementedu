@@ -1,0 +1,78 @@
+
+<body>
+<div class="signup-form">
+    <form action="register_a.php" method="post" enctype="multipart/form-data">
+		<h2>Register</h2>
+		<p class="hint-text">Create your account</p>
+        <div class="form-group">
+			<div class="row">
+				<div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="cpass" placeholder="Confirm Password" required="required">
+        </div>     
+        <div class="form-group">
+			<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" name="save" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+        <div class="text-center">Already have an account? <a href="login.php">Sign in</a></div>
+    </form>
+	
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+resiter_a.php
+
+
+<?php
+extract($_POST);
+include("database.php");
+$sql=mysqli_query($conn,"SELECT * FROM register where Email='$email'");
+if(mysqli_num_rows($sql)>0)
+{
+    echo "Email Id Already Exists"; 
+    exit;
+}
+else(isset($_POST['save']))
+{
+    $query="INSERT INTO fregister(First_Name, Last_Name, Email, Password) VALUES ('$first_name', '$last_name', '$email', 'md5($pass)')";
+        $sql=mysqli_query($conn,$query)or die("Could Not Perform the Query");
+        header ("Location: login.php?status=success");
+    }
+    else 
+    {
+        echo "Error.Please try again";
+    }
+?>
+
+
+$query="INSERT INTO ptb_users (id,
+user_id,
+first_name,
+last_name,
+email )
+VALUES('NULL',
+'NULL',
+'".$firstname."',
+'".$lastname."',
+'".$email."',
+MD5('".$password."')
+)";

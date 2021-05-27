@@ -1,0 +1,109 @@
+<section id="signup-form">
+<section class="container">
+  <h1>SIGN UP</h1>
+  <div class="row">
+  <div class="col-md-6">
+    <form class="signin-form">
+  <form action="includes/signup.inc.php" method="post">
+    <div class="form-group">
+<input type="text" class="form-control" name="name" placeholder="Full name...">
+<div class="form-group">
+<input type="text" class="form-control" name="email" placeholder="Email...">
+<div class="form-group">
+<input type="text" class="form-control" name="uid" placeholder="Username...">
+<div class="form-group">
+<input type="password" class="form-control" name="pwd" placeholder="Password...">
+<div class="form-group">
+<input type="password" class="form-control" name="pwdrepeat" placeholder="Repeat password...">
+
+<button type="submit"  class="btn btn-primary" name="submit">Sign Up</button>
+</form>
+</section>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+<form class="signup-form">
+<section class="container">
+  <h1>SIGN UP</h1>
+  <div class="row">
+ <div class="form-control">
+  <form action="includes/signup.inc.php" method="post">
+  
+<input type="text" name="name" placeholder="Full name...">
+<input type="text" name="email" placeholder="Email...">
+<input type="text" name="uid" placeholder="Username...">
+<input type="password" name="pwd" placeholder="Password...">
+<input type="password" name="pwdrepeat" placeholder="Repeat password...">
+<button type="button"  class="btn btn-primary" name="submit">Sign Up</button>
+</form>
+</div>
+</div>
+</section>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+<section id="signup">
+<div class="container">
+<h1>SIGN UP</h1>
+<div class="row">
+<div class="col-md-6">
+  <form action="includes/signup.inc.php" method="post">
+<form class="signup-form">
+<div class="form-group">
+<input type="text" class="form-control" name="name" placeholder="Fullname">
+</div>    
+<div class="form-group">
+<input type="text" class="form-control" name="email" placeholder="Email">
+</div>
+<div class="form-group">
+<input type="text" class="form-control" name="uid" placeholder="Username">
+</div>
+<div class="form-group">
+<input type="password" class="form-control" name="pwd" placeholder="Password">
+</div> 
+<div class="form-group">
+<input type="password" class="form-control" name="pwdrepeat" placeholder="Repeat password">
+</div> 
+<button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+</form>
+</form>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+<section class="signup-form">
+  <h1>SIGN UP</h1>
+  <form action="includes/signup.inc.php" method="post">
+<input type="text" name="name" placeholder="Fullname">
+<input type="text" name="email" placeholder="Email">
+<input type="text" name="uid" placeholder="Username">
+<input type="password" name="pwd" placeholder="Password">
+<input type="password" name="pwdrepeat" placeholder="Repeat password">
+<button type="submit" class="btn btn-primary" name="submit">sign up</button>
+
+  </form>
+</section>
+
+
